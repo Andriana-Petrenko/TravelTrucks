@@ -1,0 +1,53 @@
+.main_container{
+    background-image: url('../../assets/images/hero_image-min.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 64px;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../../assets/images/hero_image_2x-min.png');
+        }
+}
+ 
+.main_wrapper{
+max-width: 571px;  
+}
+
+.main_title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.67;
+    color: var(--inputs);
+    margin-bottom: 16px;
+}
+
+.main_text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--inputs);
+    margin-bottom: 40px;
+}
+
+.main_button{
+    border-radius: 200px;
+    width: 173px;
+    height: 56px;
+    background-color: var(--button);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+
+.main_button:hover{
+    background-color: var(--button-hover);
+}

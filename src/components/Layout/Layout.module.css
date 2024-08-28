@@ -1,0 +1,9 @@
+.header{
+    border-bottom: 1px solid var(--badges);
+    padding: 24px 64px;
+    background-color: var(--inputs);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
