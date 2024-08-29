@@ -1,0 +1,5 @@
+.catalog_container{
+    padding: 48px 64px;
+    display:flex;
+    gap:64px;
+}
