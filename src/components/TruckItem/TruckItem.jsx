@@ -10,7 +10,7 @@ import { toggleFavourite } from "../../redux/favourites/slice";
 const TruckItem = ({ truck }) => {
   const dispatch = useDispatch();
   const favourites = useSelector(selectFavourites);
-  const isFavourite = favourites.includes(truck.id);
+  const isFavourite = Array.isArray(favourites) && favourites.includes(truck.id);
 
   const handleToggleFavourite = () => {
     dispatch(toggleFavourite(truck.id));
