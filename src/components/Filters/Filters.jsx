@@ -8,7 +8,7 @@ import { changeFilter } from "../../redux/filters/slice";
 
 
 const LocationSchema = Yup.object().shape({
-  location: Yup.string().required('Location is required'),
+  location: Yup.string(),
 });
 const Filters = () => {
    const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const Filters = () => {
                 <use href={`${icons}#Map`} />
               </svg>
             </div>
-            {errors.location && touched.location ? (
+            {errors.location ? (
               <div className={css.errorMessage}>{errors.location}</div>
             ) : null}
              

@@ -8,7 +8,6 @@
     border-radius: 10px;
     padding: 44px 52px;
     width: 631px;
-    height: 588px;
     background-color: var(--inputs);
 }
 
@@ -19,6 +18,7 @@
     color: var(--main);
     margin-top:32px;
     position: relative;
+    margin-top:100px;
 }
 
 .equipment_title::after {

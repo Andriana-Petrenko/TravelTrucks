@@ -5,5 +5,68 @@
     border-radius: 10px;
     padding: 44px;
     width: 641px;
-    height: 588px;
+}
+
+.client_title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+    margin-bottom: 8px;
+}
+
+.client_text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--gray);
+    margin-bottom: 24px;
+}
+
+.input_wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:7px;
+}
+
+.input_text{
+    border: none;
+    border-radius: 12px;
+    padding: 18px  18px;
+    height: 60px;
+    background-color: var(--inputs);
+}
+
+.input_comment{
+    border: none;
+    border-radius: 12px;
+    padding: 18px 18px;
+    height: 118px;
+    background-color: var(--inputs);
+    
+}
+
+.send_button {
+    display: block;
+    border-radius: 200px;
+    width: 173px;
+    height: 56px;
+    background-color: var(--button);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.send_button:hover {
+    background-color: var(--button-hover);
+}
+
+.errorMessage{
+    color:var(--button-hover);
 }
