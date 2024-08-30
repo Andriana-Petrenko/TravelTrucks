@@ -1,14 +1,10 @@
 
 import { Link } from "react-router-dom"
 import css from "./TruckItem.module.css"
-import { fetchTruckDetails } from "../../redux/truck/operations";
-import { useDispatch } from "react-redux";
 import icons from '../../assets/sprite.svg';
-import { calculateAverageRating } from "../../utils/calculateRating";
 import Features from "../Features/Features";
 
 const TruckItem = ({truck}) => {
-   const dispatch = useDispatch();
   return (
       <div className={css.item_wrapper}>
       {truck.gallery?.[0]?.thumb && (
@@ -33,7 +29,7 @@ const TruckItem = ({truck}) => {
                   <svg className={css.icon} width="16" height="16">
                         <use href={`${icons}#icon-Rating`} />
                   </svg>
-                  <p className={css.reviews}>{calculateAverageRating(truck.reviews)} ({truck.reviews.length} Reviews)</p>  
+                  <p className={css.reviews}>{truck.rating} ({truck.reviews.length} Reviews)</p>  
                   <svg className={css.icon} width="20" height="20">
                         <use href={`${icons}#Map`} />
                   </svg> {truck.location}
@@ -41,8 +37,8 @@ const TruckItem = ({truck}) => {
           <p className={css.item_description}>{`${truck.description.substring(0, 60)}` + "..."}</p>
               <Features truck={truck} />
 
-              <Link to={`/catalog/${truck.id}`}>
-            <button type='button' className={css.item_button} onClick={() => dispatch(fetchTruckDetails(truck.id))}> 
+              <Link to={`/catalog/${truck.id}`} target="_blank" rel="noopener noreferrer">
+            <button type='button' className={css.item_button}> 
             Show more</button>
          </Link>
       </div>

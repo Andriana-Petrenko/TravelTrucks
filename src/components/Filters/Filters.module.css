@@ -33,7 +33,6 @@
     line-height: 1.5;
     color: var(--text);
     margin-bottom: 8px;
-    
 }
 
 .input_wrapper {
@@ -90,5 +89,43 @@
 }
 
 .group_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     margin-top:48px;
+    max-width:360px;
+}
+
+.group_wrapper p {
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    width: 112px;
+    height: 96px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--main);
+}
+
+.group_wrapper input[type="checkbox"],
+.group_wrapper input[type="radio"] {
+    display: none;
+}
+
+
+.group_wrapper p:hover {
+    border-color: var(--button-hover);
+}
+
+.group_wrapper input[type="checkbox"]:checked+p,
+.group_wrapper input[type="radio"]:checked+p {
+    border: 1px solid var(--button-hover);
 }

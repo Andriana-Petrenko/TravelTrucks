@@ -1,0 +1,12 @@
+.review {
+    display: flex;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.review_wrapper {
+    padding: 44px 52px;
+    width: 631px;
+    height: 588px;
+    background-color: var(--inputs);
+}

@@ -1,0 +1,50 @@
+.feature{
+    display: flex;
+    margin-top: 50px;
+    gap:40px;
+}
+
+.feature_wrapper{
+    border-radius: 10px;
+    padding: 44px 52px;
+    width: 631px;
+    height: 588px;
+    background-color: var(--inputs);
+}
+
+.equipment_title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+    margin-top:32px;
+    position: relative;
+}
+
+.equipment_title::after {
+    content: '';
+    position: absolute;
+    left: 260px;
+    bottom: -24px;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray-light);
+}
+
+.truck_info{
+   margin-top:48px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.truck_category{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main);
+}

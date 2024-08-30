@@ -53,23 +53,48 @@ const Filters = () => {
             <div role="group" aria-labelledby="features-group" className={css.group_wrapper}>
               <label>
                 <Field type="checkbox" name="features" value="AC" />
-                AC
+                <p>
+                  <svg  width="20" height="30">
+                          <use href={`${icons}#ac`} />
+                  </svg>
+                  AC
+                </p>
               </label>
               <label>
                 <Field type="checkbox" name="features" value="automatic" />
-                Automatic
+                <p>
+                  <svg  width="20" height="30">
+                          <use href={`${icons}#diagram`} />
+                  </svg>
+                  Automatic
+                </p>
               </label>
               <label>
                 <Field type="checkbox" name="features" value="kitchen" />
-                Kitchen
+                <p>
+                  <svg  width="20" height="30">
+                          <use href={`${icons}#cup-hot`} />
+                  </svg>
+                  Kitchen
+                </p>
               </label>
               <label>
                 <Field type="checkbox" name="features" value="TV" />
-                TV
+                <p>
+                  <svg  width="20" height="30">
+                          <use href={`${icons}#tv`} />
+                  </svg>
+                  TV
+                </p>
               </label>
               <label>
                 <Field type="checkbox" name="features" value="bathroom" />
-                Bathroom
+                  <p>
+                    <svg width="20" height="30">
+                            <use href={`${icons}#water`} />
+                    </svg>
+                    Bathroom
+                  </p>
               </label>
               
           </div>
@@ -79,15 +104,30 @@ const Filters = () => {
            <div role="group" aria-labelledby="form-group" className={css.group_wrapper}>
               <label>
                 <Field type="radio" name="form" value="van" />
-                Van
+                <p>
+                  <svg width="32" height="32">
+                            <use href={`${icons}#van`} />
+                  </svg>
+                  Van
+                </p>
               </label>
               <label>
                 <Field type="radio" name="form" value="fullyIntegrated" />
-                Fully Integrated
+                <p>
+                  <svg width="32" height="32">
+                            <use href={`${icons}#full`} />
+                  </svg>
+                  Fully Integrated
+                </p>
               </label>
               <label>
                 <Field type="radio" name="form" value="alcove" />
-                Alcove
+                <p>
+                  <svg width="32" height="32">
+                            <use href={`${icons}#alcove`} />
+                  </svg>
+                  Alcove
+                </p>
               </label>
             </div>
             {errors.bodyType && touched.bodyType ? (

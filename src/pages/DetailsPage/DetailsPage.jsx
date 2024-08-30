@@ -1,12 +1,30 @@
-import { Helmet } from "react-helmet-async"
 
-export const DetailsPage = () => {
-    return (
-     <>
+import { Helmet } from "react-helmet-async"
+import { useDispatch} from "react-redux";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { fetchTruckDetails } from "../../redux/truck/operations";
+import css from "./DetailsPage.module.css"
+import DetailedInfo from "../../components/DetailedInfo/DetailedInfo";
+
+const DetailsPage = () => {
+     const dispatch = useDispatch();
+     const { id } = useParams();
+     
+  useEffect(() => {
+   dispatch(fetchTruckDetails(id));
+  }, [dispatch,id]);
+   
+  return (
+      <>
           <Helmet>
-                <title>Details Page</title>
-            </Helmet>
-        <div>DetailsPage</div>
-     </>
+              <title>Details Page</title>
+          </Helmet>
+          <section className={css.detailed_container} >
+               <DetailedInfo/> 
+          </section>
+      </>
   )
 }
+
+export default DetailsPage
