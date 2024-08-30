@@ -33,6 +33,7 @@
     border: none;
     border-radius: 12px;
     padding: 18px  18px;
+    width: 527px;
     height: 60px;
     background-color: var(--inputs);
 }

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { fetchTruckDetails } from "../../redux/truck/operations";
 import css from "./DetailsPage.module.css"
 import DetailedInfo from "../../components/DetailedInfo/DetailedInfo";
+import { Toaster } from "react-hot-toast";
 
 const DetailsPage = () => {
      const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const DetailsPage = () => {
           <Helmet>
               <title>Details Page</title>
           </Helmet>
+          <Toaster position="top-center" reverseOrder={false} />
           <section className={css.detailed_container} >
                <DetailedInfo/> 
           </section>

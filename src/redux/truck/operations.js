@@ -19,7 +19,7 @@ export const fetchTruckDetails = createAsyncThunk(
     async (id, thunkApi) => {
     try {
       const response = await instance.get(`/campers/${id}`);
-        console.log(response.data);
+        console.log(response);
       return response.data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

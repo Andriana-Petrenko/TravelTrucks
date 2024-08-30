@@ -13,19 +13,21 @@ import {
 import storage from "redux-persist/lib/storage";
 import { truckReducer } from './truck/slice';
 import { filtersReducer } from './filters/slice';
+import { favouritesReducer } from './favourites/slice';
 
 
-const authPersistConfig = {
-  key: "auth",
+
+const favouritesPersistConfig = {
+  key: "favourites",
   storage,
-//   whitelist: ['accessToken', 'isLoggedIn'],
+  // whitelist: ['favourites'],
 };
 
 export const store = configureStore({
   reducer: {
-     trucks:truckReducer,
-     filters: filtersReducer,
-    // auth:persistReducer(authPersistConfig, authReducer),
+    trucks:truckReducer,
+    filters: filtersReducer,
+    favourites:persistReducer(favouritesPersistConfig, favouritesReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

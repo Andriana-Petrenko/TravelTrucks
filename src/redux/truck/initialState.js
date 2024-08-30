@@ -1,6 +1,6 @@
 export const initialState = {
- trucks: [],
- truck: {
+   trucks: [],
+   truck: {
     name: '',
     rating: 0,
     reviews: [],
@@ -10,10 +10,11 @@ export const initialState = {
     description: '',
   },
  isLoading: false,
-    error: null,
+ error: null,
  filters: {
      features: [],
      form:"",
      location:"",
    },
+ favourites:[],
 };
