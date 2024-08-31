@@ -1,8 +1,28 @@
-# React + Vite
+##TravelTrucker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проєкт призначений для пошуку камперів для подорожей.
 
-Currently, two official plugins are available:
+## Вимоги
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Перед запуском проєкту переконайтеся, що на вашій системі встановлено:
+
+- [Node.js](https://nodejs.org/) версії X.X.X або новішої
+- [npm](https://www.npmjs.com/) або [yarn](https://yarnpkg.com/) для управління пакетами
+
+## Установка
+
+1. Клонуйте репозиторій:
+   ```bash
+   git clone https://github.com/your-username/your-project.git
+   ```
+   Перейдіть у директорію проєкту:
+
+cd TravelTrucker
+Встановіть залежності:
+
+Якщо використовуєте npm:
+npm install. Якщо використовуєте yarn:yarn install.
+
+2. Запуск проєкту
+   Щоб запустити локальний сервер для розробки:
+   Якщо використовуєте npm: npm run dev. Якщо використовуєте yarn: yarn run dev. Після цього сервер запуститься, і ви зможете відкрити ваш проєкт у браузері за адресою http://localhost:5173.
