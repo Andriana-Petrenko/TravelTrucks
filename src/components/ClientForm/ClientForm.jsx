@@ -28,12 +28,12 @@ const ClientForm = () => {
                   comment: ''
               }}
               validationSchema={Schema}
-              onSubmit={values => {
-                  console.log(values)      
+              onSubmit={(values, { resetForm }) => {    
                   toast.success('You successfully send form!');
+                  resetForm();
               }}
             >
-              {({ errors, values, setFieldValue }) => (
+              {({ errors, values, touched,setFieldValue }) => (
                   <Form>
                       <div className={css.input_wrapper}>
                           <label htmlFor="name"></label>
@@ -42,21 +42,22 @@ const ClientForm = () => {
                               name="name"
                               type="text"
                               placeholder="Name*"/>
-                          {errors.name ? (<div className={css.errorMessage}>{errors.name}</div>) : null}
+                          {touched.name && errors.name ? (<div className={css.errorMessage}>{errors.name}</div>) : null}
                           <label htmlFor="email"></label>
                           <Field
                               className={css.input_text}
                               name="email"
                               type="email"
                               placeholder="Email*" />
-                          {errors.email ? (<div className={css.errorMessage}>{errors.email}</div>) : null}
+                          {touched.email && errors.email ? (<div className={css.errorMessage}>{errors.email}</div>) : null}
                           <label htmlFor="date"></label>
                           <DatePicker
                               selected={values.date}
                               onChange={(date) => setFieldValue('date', date)}
                               className={css.input_text}
+                              placeholderText="Booking date*"
                               locale="en-GB"/>
-                          {errors.date ? (<div className={css.errorMessage}>{errors.date}</div>) : null}
+                          {touched.date && errors.date ? (<div className={css.errorMessage}>{errors.date}</div>) : null}
                           <label htmlFor="comment"></label>
                           <Field
                               className={css.input_comment}
