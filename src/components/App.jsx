@@ -17,7 +17,7 @@ function App() {
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/catalog' element={<CatalogPage/>}></Route>
           <Route path='/catalog/:id/*' element={<DetailsPage />}></Route>
-          <Route path='/catalog/favourites' element={<FavouritePage/>}></Route>  
+          <Route path='/favourites' element={<FavouritePage/>}></Route>  
           <Route path='*' element={<NotFoundPage/>}></Route>     
           </Routes>
     </Layout>

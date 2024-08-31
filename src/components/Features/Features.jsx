@@ -9,6 +9,12 @@ const Features = ({truck}) => {
     { key: "TV", label: "TV", svg:"tv" },
     { key: "radio", label: "Radio", svg:"radio" },
     { key: "gas", label: "Gas", svg:"fuel-pump" },
+    { key: "microwave", label: "Microwave", svg:"wave" },
+    { key: "refrigerator", label: "Frige", svg:"frige" },
+    { key: "engine", label: "Hybrid", svg: "engine", value: "hybrid" },
+    { key: "engine", label: "Diesel", svg:"engine", value: "diesel"},
+    { key: "engine", label: "Petrol", svg:"engine", value: "petrol"},
+
   ];
   return (
     <div className={css.features}>

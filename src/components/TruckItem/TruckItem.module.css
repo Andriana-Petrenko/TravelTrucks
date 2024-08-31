@@ -1,6 +1,7 @@
 .item_wrapper{
     display:flex;
     gap:24px;
+    min-height:368px;
 }
 
 .photo{

@@ -20,13 +20,17 @@ import { favouritesReducer } from './favourites/slice';
 const favouritesPersistConfig = {
   key: "favourites",
   storage,
-  // whitelist: ['favourites'],
+};
+
+const filtersPersistConfig = {
+  key: "filters",
+  storage,
 };
 
 export const store = configureStore({
   reducer: {
     trucks:truckReducer,
-    filters: filtersReducer,
+    filters: persistReducer(filtersPersistConfig, filtersReducer),
     favourites:persistReducer(favouritesPersistConfig, favouritesReducer),
   },
   middleware: (getDefaultMiddleware) =>

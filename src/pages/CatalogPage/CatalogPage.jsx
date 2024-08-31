@@ -6,11 +6,13 @@ import TruckList from "../../components/TruckList/TruckList";
 import Filters from "../../components/Filters/Filters";
 import css from "./CatalogPage.module.css"
 import { selectFilteredTrucks } from "../../redux/filters/selectors";
+import { isLoading } from "../../redux/truck/selectors";
 
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const filteredTrucks = useSelector(selectFilteredTrucks);
+  const loading = useSelector(isLoading); 
   const [visibleCount, setVisibleCount] = useState(4);
   useEffect(() => {
     dispatch(fetchTrucks());
@@ -33,7 +35,7 @@ const CatalogPage = () => {
             <Filters/>
         <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
         </section>
-      {visibleCount < filteredTrucks.length && (
+      {!loading && visibleCount < filteredTrucks.length && (
         <button className={css.search_button} type="button" onClick={onClickButton}>
           Load more
         </button>

@@ -10,3 +10,10 @@
     padding: 24px;
     width: 888px;
 }
+
+.text{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+}

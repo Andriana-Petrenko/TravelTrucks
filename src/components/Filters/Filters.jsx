@@ -2,8 +2,9 @@ import { Field, Form, Formik } from "formik";
 import * as Yup from 'yup';
 import css from "./Filters.module.css";
 import icons from '../../assets/sprite.svg';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filters/slice";
+import { selectFilters } from "../../redux/filters/selectors";
 
 
 
@@ -11,21 +12,19 @@ const LocationSchema = Yup.object().shape({
   location: Yup.string(),
 });
 const Filters = () => {
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const filters = useSelector(selectFilters);
   return (
       <div className={css.filter_wrapper}>
           
            <Formik
         initialValues={{
-          location: '',
-          form: '',
-          features: [], }}
+          location: filters.location,
+          form: filters.form,
+          features: filters.features, }}
         validationSchema={LocationSchema}
         onSubmit={values => {
-          console.log(values);
-          dispatch(changeFilter(values));
-               
-                
+          dispatch(changeFilter(values));  
               }}
             >
               {({ errors, touched }) => (
@@ -36,7 +35,7 @@ const Filters = () => {
                 className={css.input_location}
                 name="location"
                 type="text"
-                placeholder="Enter a location"
+                placeholder="City"
               />
               <svg className={css.icon} width="20" height="20">
                 <use href={`${icons}#Map`} />
@@ -103,7 +102,7 @@ const Filters = () => {
          <h3 className={css.equipment_title}>Vehicle type</h3>
            <div role="group" aria-labelledby="form-group" className={css.group_wrapper}>
               <label>
-                <Field type="radio" name="form" value="van" />
+                <Field type="radio" name="form" value="panelTruck" />
                 <p>
                   <svg width="32" height="32">
                             <use href={`${icons}#van`} />
