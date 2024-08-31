@@ -9,10 +9,10 @@ const Layout = ({ children }) => {
     return (
     <>
      <Suspense fallback={<Loader />}>
-        <header className={css.header}>
-            <Logo/>
-            <Navigation/>
-       </header>
+           <header className={css.header}>
+                  <Logo/>
+                  <Navigation/>
+          </header>
         <main>{children} </main>
      </Suspense>
         </>

@@ -2,6 +2,7 @@ import './App.css'
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
+import FavouritePage from '../pages/FavouritePage/FavouritePage';
 
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
@@ -15,7 +16,8 @@ function App() {
        <Routes>
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/catalog' element={<CatalogPage/>}></Route>
-          <Route path='/catalog/:id/*' element={<DetailsPage/>}></Route>
+          <Route path='/catalog/:id/*' element={<DetailsPage />}></Route>
+          <Route path='/catalog/favourites' element={<FavouritePage/>}></Route>  
           <Route path='*' element={<NotFoundPage/>}></Route>     
           </Routes>
     </Layout>

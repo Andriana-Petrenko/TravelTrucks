@@ -1,0 +1,18 @@
+.favourite_wrapper{
+    margin: 32px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 28px;
+}
+
+.favourite_title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--main);
+}
+
+.favourite_list{
+    margin:0 auto;
+}
