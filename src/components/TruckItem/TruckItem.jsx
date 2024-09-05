@@ -34,7 +34,8 @@ const TruckItem = ({ truck }) => {
               width="26"
               height="24"
               onClick={handleToggleFavourite}
-              fill={isFavourite ? "#e44848" : "#101828"}>
+              fill={isFavourite ? "#e44848" : "#101828"}
+              cursor='pointer'>
               <use href={`${icons}#heard`} />
             </svg>
           </div>
